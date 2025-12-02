@@ -5,17 +5,17 @@
 
 /* CSS Custom Properties */
 :root {
-    --primary: #212282;
-    --primary-light: rgba(33, 34, 130, 0.1);
-    --primary-medium: rgba(33, 34, 130, 0.25);
-    --secondary: #E6411C;
-    --secondary-light: rgba(230, 65, 28, 0.2);
+    --primary: #1a1a1a;
+    --primary-light: rgba(255, 255, 255, 0.05);
+    --primary-medium: rgba(255, 255, 255, 0.1);
+    --secondary: rgba(255, 255, 255, 0.7);
+    --secondary-light: rgba(255, 255, 255, 0.15);
     --white: #ffffff;
     --black: #0a0a0a;
     --success: #22c55e;
     --error: #ef4444;
-    --gradient-start: #0f0f3d;
-    --gradient-end: #1a1a5e;
+    --gradient-start: #0a0a0a;
+    --gradient-end: #1a1a1a;
     
     /* Typography */
     --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -35,10 +35,10 @@
     --radius-full: 50%;
     
     /* Shadows */
-    --shadow-card: 0 25px 50px -12px rgba(33, 34, 130, 0.25);
-    --shadow-button: 0 10px 25px rgba(230, 65, 28, 0.2);
-    --shadow-input: 0 4px 20px rgba(0, 0, 0, 0.1);
-    --shadow-glow: 0 0 40px rgba(230, 65, 28, 0.4);
+    --shadow-card: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    --shadow-button: 0 10px 25px rgba(255, 255, 255, 0.1);
+    --shadow-input: 0 4px 20px rgba(0, 0, 0, 0.3);
+    --shadow-glow: 0 0 40px rgba(255, 255, 255, 0.15);
     
     /* Transitions */
     --transition-fast: 0.2s ease;
@@ -60,7 +60,7 @@ html {
 
 body {
     font-family: var(--font-family);
-    background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 50%, var(--primary) 100%);
+    background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 50%, #121212 100%);
     background-attachment: fixed;
     background-size: 200% 200%;
     color: var(--white);
@@ -116,11 +116,10 @@ body {
 }
 
 .logo {
-    width: 80px;
+    width: 160px;
     height: auto;
-    border-radius: var(--radius-sm);
-    box-shadow: var(--shadow-card);
     object-fit: contain;
+    filter: drop-shadow(0 4px 20px rgba(255, 255, 255, 0.1));
 }
 
 /* Typography */
@@ -187,7 +186,7 @@ body {
 .countdown-separator {
     font-size: 1.25rem;
     font-weight: 300;
-    color: var(--secondary);
+    color: rgba(255, 255, 255, 0.4);
     opacity: 0.6;
     height: 56px;
     display: flex;
@@ -308,7 +307,7 @@ body {
     }
     
     .logo {
-        width: 60px;
+        width: 120px;
     }
     
     .main-title {
@@ -350,7 +349,7 @@ body {
     }
     
     .logo {
-        width: 70px;
+        width: 140px;
     }
     
     .main-title {
@@ -396,7 +395,7 @@ body {
     }
     
     .logo {
-        width: 90px;
+        width: 180px;
     }
     
     .main-title {
@@ -439,7 +438,7 @@ body {
     }
     
     .logo {
-        width: 100px;
+        width: 200px;
     }
     
     .main-title {
@@ -483,7 +482,7 @@ body {
     }
     
     .logo {
-        width: 110px;
+        width: 220px;
     }
     
     .main-title {
@@ -535,8 +534,8 @@ body {
 /* Dark Mode Enhancement */
 @media (prefers-color-scheme: dark) {
     :root {
-        --gradient-start: #0a0a2e;
-        --gradient-end: #151550;
+        --gradient-start: #0a0a0a;
+        --gradient-end: #1a1a1a;
     }
 }
 
@@ -562,7 +561,7 @@ body {
     }
     
     .logo {
-        width: 50px;
+        width: 100px;
     }
     
     .countdown-container {

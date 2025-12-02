@@ -108,7 +108,7 @@ class ParticleSystem {
     }
 
     createParticle() {
-        const opacity = Math.random() * 0.5 + 0.1;
+        const opacity = Math.random() * 0.3 + 0.05;
         return {
             x: Math.random() * this.canvas.width,
             y: Math.random() * this.canvas.height,
@@ -165,7 +165,7 @@ class ParticleSystem {
     drawParticle(particle) {
         this.ctx.beginPath();
         this.ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-        this.ctx.fillStyle = `rgba(33, 34, 130, ${particle.currentOpacity || particle.opacity})`;
+        this.ctx.fillStyle = `rgba(255, 255, 255, ${particle.currentOpacity || particle.opacity})`;
         this.ctx.fill();
     }
 
@@ -177,9 +177,9 @@ class ParticleSystem {
                 const distance = Math.sqrt(dx * dx + dy * dy);
 
                 if (distance < 150) {
-                    const opacity = (1 - distance / 150) * 0.1;
+                    const opacity = (1 - distance / 150) * 0.05;
                     this.ctx.beginPath();
-                    this.ctx.strokeStyle = `rgba(230, 65, 28, ${opacity})`;
+                    this.ctx.strokeStyle = `rgba(255, 255, 255, ${opacity})`;
                     this.ctx.lineWidth = 1;
                     this.ctx.moveTo(this.particles[i].x, this.particles[i].y);
                     this.ctx.lineTo(this.particles[j].x, this.particles[j].y);
@@ -274,16 +274,16 @@ if (!('scrollBehavior' in document.documentElement.style)) {
 // =====================================================
 
 console.log(
-    '%c9 YARDS',
-    'font-size: 48px; font-weight: bold; color: #212282; text-shadow: 2px 2px 0 #E6411C;'
+    '%c9 YARDS FILM',
+    'font-size: 48px; font-weight: bold; color: #ffffff; text-shadow: 2px 2px 0 #333;'
 );
 console.log(
     '%cSomething extraordinary is coming...',
-    'font-size: 16px; color: #666;'
+    'font-size: 16px; color: #888;'
 );
 console.log(
     '%cInterested in working with us? Contact: hello@9yards.com',
-    'font-size: 12px; color: #999;'
+    'font-size: 12px; color: #666;'
 );
 
 // =====================================================
