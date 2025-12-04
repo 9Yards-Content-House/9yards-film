@@ -86,13 +86,17 @@ body {
 /* Hero Section */
 .hero {
     position: relative;
-    height: 100vh;
-    height: 100dvh; /* Dynamic viewport height for mobile */
+    min-height: 100vh;
+    min-height: 100dvh; /* Dynamic viewport height for mobile */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: var(--spacing-lg) var(--spacing-md);
+    padding-top: max(var(--spacing-lg), env(safe-area-inset-top));
+    padding-bottom: max(var(--spacing-lg), env(safe-area-inset-bottom));
+    padding-left: max(var(--spacing-md), env(safe-area-inset-left));
+    padding-right: max(var(--spacing-md), env(safe-area-inset-right));
     z-index: 2;
     overflow: hidden;
 }
@@ -116,10 +120,9 @@ body {
 }
 
 .logo {
-    width: 160px;
+    width: 180px;
     height: auto;
     object-fit: contain;
-    filter: drop-shadow(0 4px 20px rgba(255, 255, 255, 0.1));
 }
 
 /* Typography */
@@ -247,11 +250,13 @@ body {
 .footer {
     position: absolute;
     bottom: var(--spacing-md);
+    bottom: max(var(--spacing-md), env(safe-area-inset-bottom));
     left: 0;
     right: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0 var(--spacing-sm);
 }
 
 .footer p {
@@ -282,6 +287,18 @@ body {
     }
 }
 
+/* Visible class for intersection observer */
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Focus States for Accessibility */
+*:focus-visible {
+    outline: 2px solid rgba(255, 255, 255, 0.5);
+    outline-offset: 4px;
+}
+
 /* Gradient Animation */
 @keyframes gradientShift {
     0% {
@@ -306,7 +323,7 @@ body {
     }
     
     .logo {
-        width: 120px;
+        width: 140px;
     }
     
     .main-title {
@@ -348,7 +365,7 @@ body {
     }
     
     .logo {
-        width: 140px;
+        width: 160px;
     }
     
     .main-title {
@@ -394,7 +411,7 @@ body {
     }
     
     .logo {
-        width: 180px;
+        width: 200px;
     }
     
     .main-title {
@@ -437,7 +454,7 @@ body {
     }
     
     .logo {
-        width: 200px;
+        width: 220px;
     }
     
     .main-title {
@@ -481,7 +498,7 @@ body {
     }
     
     .logo {
-        width: 220px;
+        width: 240px;
     }
     
     .main-title {
@@ -540,15 +557,102 @@ body {
 
 /* Touch Devices */
 @media (hover: none) {
-    .countdown-card:hover {
-        transform: none;
+    /* No hover effects to reset */
+}
+
+/* Very Small Screens (below 320px) */
+@media (max-width: 319px) {
+    .hero-content {
+        gap: var(--spacing-sm);
     }
     
-    .logo:hover {
-        transform: none;
+    .logo {
+        width: 120px;
+    }
+    
+    .main-title {
+        font-size: 1.75rem;
+    }
+    
+    .subtitle {
+        font-size: 0.8rem;
+    }
+    
+    .countdown-container {
+        gap: 2px;
+        max-width: 280px;
+    }
+    
+    .countdown-card {
+        height: 40px;
+        padding: 6px 2px;
+    }
+    
+    .countdown-number {
+        font-size: 1rem;
+    }
+    
+    .countdown-label {
+        font-size: 0.45rem;
+    }
+    
+    .countdown-separator {
+        font-size: 0.875rem;
+        height: 40px;
+        padding: 0;
+    }
+    
+    .footer p {
+        font-size: 0.65rem;
     }
 }
 
+/* Print Styles */
+@media print {
+    body {
+        background: white;
+        color: black;
+    }
+    
+    #particles {
+        display: none;
+    }
+    
+    .hero {
+        height: auto;
+        min-height: auto;
+        padding: 2rem;
+    }
+    
+    .logo {
+        filter: none;
+        width: 150px;
+    }
+    
+    .main-title,
+    .subtitle {
+        color: black;
+        -webkit-text-fill-color: black;
+        background: none;
+    }
+    
+    .countdown-card {
+        background: #f0f0f0;
+        border: 1px solid #ccc;
+    }
+    
+    .countdown-number {
+        color: black;
+    }
+    
+    .countdown-label {
+        color: #666;
+    }
+    
+    .footer p {
+        color: #666;
+    }
+}
 /* Landscape Mobile */
 @media (max-height: 500px) and (orientation: landscape) {
     .hero {
@@ -560,7 +664,7 @@ body {
     }
     
     .logo {
-        width: 100px;
+        width: 120px;
     }
     
     .countdown-container {
