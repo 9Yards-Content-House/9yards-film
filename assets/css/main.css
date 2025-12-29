@@ -489,14 +489,15 @@ footer {
   text-align: center;
   background: rgba(255, 255, 255, 0.04);
   border-radius: 50%;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
   margin-right: 10px;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   border: 1px solid rgba(255, 255, 255, 0.1);
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
+  line-height: 1 !important;
 }
 
 .dgm-footer-widget-social a:last-child {
@@ -505,7 +506,10 @@ footer {
 
 .dgm-footer-widget-social a i {
   font-size: 16px;
-  line-height: 1;
+  line-height: 1 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
 }
 
 .dgm-footer-widget-social a:hover {
