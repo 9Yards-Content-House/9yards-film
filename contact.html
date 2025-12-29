@@ -200,9 +200,360 @@
         <div id="smooth-content">
 
             <main>
-                
-                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-            
+
+
+        <!-- Hero Section -->
+        <section class="contact-hero-area">
+            <div class="contact-hero-overlay"></div>
+            <div class="container">
+                <div class="row justify-content-center text-center">
+                    <div class="col-xl-10">
+                        <div class="contact-hero-content tp_fade_anim">
+                            <h3>Let's Bring Your Vision to Life</h3>
+                            <p>Whether it's a music video, brand campaign, or documentary—we're ready to make it happen. Get in touch and let's start creating.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Form & Info Section -->
+        <section class="contact-form-area">
+            <div class="container">
+                <div class="row">
+                    <!-- Left Column: Contact Form -->
+                    <div class="col-lg-7 mb-50 tp_fade_anim">
+                        <div class="custom-form-wrapper">
+                            <div class="custom-form-heading">
+                                <h4>Start Your Project</h4>
+                            </div>
+                            <form id="contact-form" action="assets/mail.php" method="POST">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="custom-form-input">
+                                            <label>Your Name*</label>
+                                            <input name="name" type="text" placeholder="Full Name" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="custom-form-input">
+                                            <label>Email Address*</label>
+                                            <input name="email" type="email" placeholder="your.email@example.com" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="custom-form-input">
+                                            <label>Phone Number</label>
+                                            <input name="phone" type="tel" placeholder="+256 700 000 000">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="custom-form-input">
+                                            <label>Project Type*</label>
+                                            <select name="project_type" required>
+                                                <option value="" disabled selected>Select an option</option>
+                                                <option value="Music Video">Music Video</option>
+                                                <option value="Brand Film/Commercial">Brand Film/Commercial</option>
+                                                <option value="Documentary">Documentary</option>
+                                                <option value="Corporate Video">Corporate Video</option>
+                                                <option value="Event Coverage">Event Coverage</option>
+                                                <option value="Content Creation">Content Creation</option>
+                                                <option value="Gear Rental Inquiry">Gear Rental Inquiry</option>
+                                                <option value="Other">Other</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="custom-form-input">
+                                            <label>Budget Range</label>
+                                            <select name="budget">
+                                                <option value="" disabled selected>Select an option</option>
+                                                <option value="Under 2M UGX">Under 2M UGX</option>
+                                                <option value="2M - 5M UGX">2M - 5M UGX</option>
+                                                <option value="5M - 10M UGX">5M - 10M UGX</option>
+                                                <option value="10M - 20M UGX">10M - 20M UGX</option>
+                                                <option value="20M+ UGX">20M+ UGX</option>
+                                                <option value="Prefer to Discuss">Prefer to Discuss</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="custom-form-input">
+                                            <label>Project Timeline</label>
+                                            <input name="timeline" type="text" placeholder="When do you need this completed?">
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="custom-form-input">
+                                            <label>Tell Us About Your Project*</label>
+                                            <textarea name="message" placeholder="Describe your vision, goals, and any specific requirements..." required></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="custom-form-input">
+                                            <label>How Did You Hear About Us?</label>
+                                            <select name="referral">
+                                                <option value="" disabled selected>Select an option</option>
+                                                <option value="Google Search">Google Search</option>
+                                                <option value="Instagram">Instagram</option>
+                                                <option value="TikTok">TikTok</option>
+                                                <option value="YouTube">YouTube</option>
+                                                <option value="Friend/Referral">Friend/Referral</option>
+                                                <option value="Saw Your Work">Saw Your Work</option>
+                                                <option value="Other">Other</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="custom-form-btn">
+                                            <button type="submit">Send Message &rarr;</button>
+                                        </div>
+                                        <p class="form-note">We'll respond within 24 hours. For urgent inquiries, call us at +256 700 488 870.</p>
+                                        <p class="ajax-response mt-3 text-center"></p>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Contact Info -->
+                    <div class="col-lg-5 mb-50 tp_fade_anim">
+                        <div class="contact-info-wrapper">
+                            <h4 class="contact-info-title">Get In Touch</h4>
+                            
+                            <div class="contact-detail-box">
+                                <span class="contact-detail-label"><i class="fas fa-phone-alt"></i> Phone</span>
+                                <div class="contact-detail-value">
+                                    <a href="tel:+256700488870">+256 700 488 870</a>
+                                </div>
+                                <span class="text-muted d-block mt-1" style="font-size: 14px;">Mon-Sat: 9AM-6PM EAT</span>
+                            </div>
+
+                            <div class="contact-detail-box">
+                                <span class="contact-detail-label"><i class="fas fa-envelope"></i> Email</span>
+                                <div class="contact-detail-value">
+                                    <a href="mailto:film@9yards.co.ug">film@9yards.co.ug</a>
+                                </div>
+                                <span class="text-muted d-block mt-1" style="font-size: 14px;">We respond within 24 hours</span>
+                            </div>
+
+                            <div class="contact-detail-box">
+                                <span class="contact-detail-label"><i class="fas fa-map-marker-alt"></i> Studio Location</span>
+                                <div class="contact-detail-value">
+                                    Kiwatule, Kampala<br>Uganda
+                                </div>
+                            </div>
+
+                            <div class="contact-detail-box">
+                                <span class="contact-detail-label"><i class="far fa-clock"></i> Business Hours</span>
+                                <div class="contact-detail-value" style="font-size: 16px;">
+                                    Mon - Fri: 9:00 AM - 6:00 PM<br>
+                                    Sat: 10:00 AM - 4:00 PM<br>
+                                    Sun: Closed
+                                </div>
+                            </div>
+
+                            <div class="contact-social-links">
+                                <a href="https://wa.me/256700488870" target="_blank" class="contact-social-btn" aria-label="WhatsApp">
+                                    <i class="fab fa-whatsapp"></i>
+                                </a>
+                                <a href="https://www.instagram.com/9yards_content_house/" target="_blank" class="contact-social-btn" aria-label="Instagram">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" target="_blank" class="contact-social-btn" aria-label="TikTok">
+                                    <i class="fab fa-tiktok"></i>
+                                </a>
+                                <a href="https://www.youtube.com/@9Yards-ch" target="_blank" class="contact-social-btn" aria-label="YouTube">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                            </div>
+
+                            <!-- Quick Info Box -->
+                            <div class="quick-info-box">
+                                <h5 class="feature-title mb-4" style="font-size: 18px;">What Happens Next?</h5>
+                                <div class="quick-info-step">
+                                    <span class="step-number">1.</span>
+                                    <div class="step-content">
+                                        <strong>You submit the form</strong>
+                                        <span>Tell us about your project</span>
+                                    </div>
+                                </div>
+                                <div class="quick-info-step">
+                                    <span class="step-number">2.</span>
+                                    <div class="step-content">
+                                        <strong>We review your inquiry</strong>
+                                        <span>Within 24 hours</span>
+                                    </div>
+                                </div>
+                                <div class="quick-info-step">
+                                    <span class="step-number">3.</span>
+                                    <div class="step-content">
+                                        <strong>We schedule a call</strong>
+                                        <span>Discuss your vision and budget</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Map Section -->
+        <section class="map-section-area tp_fade_anim">
+             <div class="contact-map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15958.98774775439!2d32.617488!3d0.363628!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177db84f6d32f505%3A0x6b95521406856525!2sKiwatule%2C%20Kampala!5e0!3m2!1sen!2sug!4v1709210000000!5m2!1sen!2sug" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="map-caption">
+                <p class="m-0"> <i class="fas fa-map-marker-alt" style="color: var(--tp-common-red-3); margin-right: 8px;"></i> Located in the heart of Kampala. Stop by to see our studio and discuss your project in person.</p>
+            </div>
+        </section>
+
+        <!-- Why Choose Us -->
+        <section class="features-area">
+            <div class="container">
+                <div class="row justify-content-center mb-50">
+                    <div class="col-12 text-center">
+                        <h3 class="custom-form-heading text-white">Why Work With 9Yards Film?</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 mb-30 tp_fade_anim">
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                            <h4 class="feature-title">Fast Turnaround</h4>
+                            <p class="feature-desc">We respect your deadlines. From concept to delivery, we work efficiently without sacrificing quality.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-30 tp_fade_anim">
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-camera-movie"></i>
+                            </div>
+                            <h4 class="feature-title">Professional Equipment</h4>
+                            <p class="feature-desc">Cinema-grade cameras, drones, lighting, and audio gear. Broadcast-quality production every time.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-30 tp_fade_anim">
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <h4 class="feature-title">Transparent Pricing</h4>
+                            <p class="feature-desc">No hidden fees. Clear quotes with detailed breakdowns so you know exactly what you're paying for.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-area">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="faq-heading tp_fade_anim">
+                            <h3>Frequently Asked Questions</h3>
+                        </div>
+                        
+                        <div class="faq-wrapper tp_fade_anim">
+                            
+                            <details class="faq-item">
+                                <summary class="faq-header">
+                                    <h5 class="faq-question">What's your typical project timeline?</h5>
+                                    <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                                </summary>
+                                <div class="faq-body">
+                                    <p>Music videos typically take 2-3 weeks from concept to delivery. Corporate videos and documentaries vary based on scope, but we'll provide a clear timeline in our proposal. Rush projects are available for an additional fee.</p>
+                                </div>
+                            </details>
+
+                            <details class="faq-item">
+                                <summary class="faq-header">
+                                    <h5 class="faq-question">Do you work outside of Kampala?</h5>
+                                    <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                                </summary>
+                                <div class="faq-body">
+                                    <p>Yes! We serve clients across Uganda and East Africa. Travel and accommodation costs are included in project quotes when applicable.</p>
+                                </div>
+                            </details>
+
+                             <details class="faq-item">
+                                <summary class="faq-header">
+                                    <h5 class="faq-question">What's included in your pricing?</h5>
+                                    <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                                </summary>
+                                <div class="faq-body">
+                                    <p>Our quotes include pre-production planning, filming (crew + equipment), post-production (editing, color grading, sound design), and revisions. We'll provide a detailed breakdown in your proposal.</p>
+                                </div>
+                            </details>
+
+                             <details class="faq-item">
+                                <summary class="faq-header">
+                                    <h5 class="faq-question">Can I use my own ideas/script?</h5>
+                                    <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                                </summary>
+                                <div class="faq-body">
+                                    <p>Absolutely! We love collaborating with clients who have a clear vision. We'll help refine your concept and bring it to life professionally.</p>
+                                </div>
+                            </details>
+
+                             <details class="faq-item">
+                                <summary class="faq-header">
+                                    <h5 class="faq-question">Do you offer payment plans?</h5>
+                                    <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                                </summary>
+                                <div class="faq-body">
+                                    <p>Yes, we typically work with a deposit structure: 50% upfront to begin production, 50% upon final delivery. Custom payment schedules available for larger projects.</p>
+                                </div>
+                            </details>
+
+                             <details class="faq-item">
+                                <summary class="faq-header">
+                                    <h5 class="faq-question">What equipment do you use?</h5>
+                                    <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                                </summary>
+                                <div class="faq-body">
+                                    <p>We shoot on cinema-grade cameras (Sony FX series, RED, etc.), use professional drones (DJI), cinema lenses, and broadcast lighting. Check our <a href="https://gear.9yards.co.ug" target="_blank" style="color: var(--tp-common-red-3);">Gear page</a> for full equipment list.</p>
+                                </div>
+                            </details>
+
+                             <details class="faq-item">
+                                <summary class="faq-header">
+                                    <h5 class="faq-question">Can I rent equipment instead?</h5>
+                                    <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                                </summary>
+                                <div class="faq-body">
+                                    <p>Yes! Visit <a href="https://gear.9yards.co.ug" target="_blank" style="color: var(--tp-common-red-3);">gear.9yards.co.ug</a> to browse our rental catalog and rates.</p>
+                                </div>
+                            </details>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section class="final-cta-area tp_fade_anim">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10 text-center">
+                        <div class="cta-content">
+                            <h2>Ready to Start Filming?</h2>
+                            <p>Fill out the form above or call us directly. Let's create something unforgettable together.</p>
+                            <div class="cta-buttons">
+                                <a href="tel:+256700488870" class="tp-btn-white">Call Now: +256 700 488 870</a>
+                                <a href="mailto:film@9yards.co.ug" class="tp-btn-border-white">Send Us an Email</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
             </main>
 
             <footer>
