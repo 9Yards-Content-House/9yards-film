@@ -59,28 +59,125 @@
             -webkit-text-fill-color: transparent !important;
             background-clip: text !important;
             text-fill-color: transparent !important;
-            text-shadow: 0px 4px 24px rgba(0, 0, 0, 0.5); /* Softened shadow for text clip compatibility */
+            text-shadow: 0px 4px 24px rgba(0, 0, 0, 0.5);
             line-height: 1.15;
             letter-spacing: 0.01em;
-            display: inline-block; /* Essential for background-clip: text in some cases */
+            display: inline-block;
+        }
+
+        /* Hero Section Layout */
+        .creative-2-hero-wrap {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-top: 160px;
+            padding-bottom: 80px;
+        }
+
+        /* Hero headline responsive styles */
+        .creative-2-hero-title.gear-heading {
+            font-size: 64px !important;
+            line-height: 1.1 !important;
+            /* margin-bottom: 40px !important; */
+            max-width: 1100px;
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+
+        /* Hero subheadline responsive styles */
+        .hero-subheadline {
+            font-size: 20px;
+            font-weight: 400;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 800px;
+            line-height: 1.6;
+            margin-bottom: 48px !important;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 1 !important;
+            visibility: visible !important;
+        }
+
+        /* Button Container Spacing */
+        .creative-2-hero-btn {
+            margin-bottom: 120px !important;
+            margin-top: 80px;
+        }
+
+        /* Secondary Button Styling */
+        .tp-btn-secondary {
+            display: inline-block;
+            font-size: 16px;
+            font-weight: 600;
+            color: #ffffff;
+            padding: 12px 32px;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .tp-btn-secondary:hover {
+            background: #ffffff;
+            color: #000000;
+            border-color: #ffffff;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Video container styling */
+        .hero-video-wrapper {
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        .hero-video-wrapper video {
+            width: 100%;
+            border-radius: 24px;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         @media (max-width: 767px) {
+            .creative-2-hero-wrap {
+                padding-top: 100px;
+            }
             .gear-heading {
-                font-size: 32px !important;
+                font-size: 28px !important;
                 line-height: 1.2;
             }
             .creative-2-hero-title.gear-heading {
                 font-size: 36px !important;
+                margin-bottom: 24px !important;
+            }
+            .hero-subheadline {
+                font-size: 16px;
+                padding: 0 15px;
+                margin-bottom: 32px !important;
+            }
+            .creative-2-hero-btn {
+                flex-direction: column;
+                width: 100%;
+                gap: 12px !important;
+                margin-bottom: 80px !important;
+            }
+            .creative-2-hero-btn a {
+                width: 100%;
+                text-align: center;
+                justify-content: center;
+                padding: 14px 20px;
             }
         }
 
-        @media (min-width: 768px) {
+        @media (min-width: 768px) and (max-width: 991px) {
             .gear-heading {
                 font-size: 44px !important;
             }
             .creative-2-hero-title.gear-heading {
-                font-size: 56px !important; /* Slightly larger for the main hero */
+                font-size: 60px !important;
             }
         }
     </style>
@@ -232,28 +329,21 @@
             <main>
 
                 <!-- hero area start -->
-                <div class="creative-2-hero-wrap pt-180">
+                <div class="creative-2-hero-wrap">
                     <div class="container container-1610">
-                        <div class="creative-2-hero-top-wrap mb-60">
-                            <div class="row align-items-end">
-                                <div class="col-xl-6">
-                                    <div class="creative-2-hero-title-box">
-                                        <h2 class="creative-2-hero-title gear-heading text-white text-start">
+                        <div class="creative-2-hero-top-wrap">
+                            <div class="row justify-content-center">
+                                <div class="col-xl-12">
+                                    <div class="creative-2-hero-title-box text-center">
+                                        <h2 class="creative-2-hero-title gear-heading text-white tp_fade_anim" data-fade-from="bottom" data-delay=".3">
                                             Going all the way for you!
                                         </h2>
-                                    </div>
-                                </div>
-                                <div class="col-xl-6">
-                                    <div class="creative-2-hero-btn-wrap">
-                                        <div class="row">
-                                            <div class="col-xl-8">
-                                                <div class="creative-2-hero-btn-wrap text-xl-end">
-                                                    <div class="creative-2-hero-btn">
-                                                        <a href="portfolio-details-classic-stack.html" class="tp-btn-custom mr-15">View our work</a>
-                                                        <a href="team-dark.html" class="tp-btn-custom">Meet the team</a>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                        <p class="hero-subheadline text-white tp_fade_anim" data-fade-from="bottom" data-delay=".5">
+                                            Cinema-grade production for music videos, documentaries, and commercials. From concept to final cut crafted in Kampala.
+                                        </p>
+                                        <div class="creative-2-hero-btn d-flex justify-content-center align-items-center tp_fade_anim" data-fade-from="bottom" data-delay=".7" style="gap: 16px; flex-wrap: wrap;">
+                                            <a href="contact.html" class="tp-btn-custom">Start Your Project</a>
+                                            <a href="https://www.youtube.com/@9Yards-ch" target="_blank" class="tp-btn-secondary">See More Work →</a>
                                         </div>
                                     </div>
                                 </div>
@@ -261,11 +351,11 @@
                         </div>
                     </div>
                     <div class="creative-2-hero-banner-area">
-                        <div class="container-fluid">
+                        <div class="container container-1610">
                             <div class="row">
                                 <div class="col-xl-12">
                                     <div class="creative-hero-banner-wrap">
-                                        <div class="creative-hero-banner">
+                                        <div class="creative-hero-banner hero-video-wrapper tp_fade_anim" data-fade-from="bottom" data-delay=".9">
                                             <video loop="" muted="" autoplay="" playsinline="">
                                                 <source src="assets/img/9Yards-Film/Videos/Spice Diana - Nzigulawo.mp4" type="video/mp4">
                                             </video>
