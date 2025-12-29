@@ -150,22 +150,376 @@
             transition: all 0.3s ease;
         }
 
+        /* Modern Footer Styling */
+        footer {
+            font-family: 'Inter', sans-serif !important;
+        }
+
+        .dgm-footer-widget-title {
+            font-family: 'Inter', sans-serif !important;
+            font-weight: 700 !important;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-size: 15px !important;
+            margin-bottom: 30px !important;
+            color: #ffffff !important;
+        }
+
+        .dgm-footer-widget-paragraph p {
+            font-family: 'Inter', sans-serif !important;
+            color: rgba(255, 255, 255, 0.6) !important;
+            line-height: 1.7;
+            font-size: 15px;
+        }
+
+        .dgm-footer-widget-menu ul li a {
+            font-family: 'Inter', sans-serif !important;
+            color: rgba(255, 255, 255, 0.5) !important;
+            font-size: 15px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
         .dgm-footer-widget-menu ul li a:hover,
         .tp-copyright-2-menu ul li a:hover,
         .tp-copyright-2-middle a:hover,
         .tp-copyright-2-left a:hover {
             color: #ffffff !important;
+            transform: translateX(5px);
         }
 
-        .dgm-footer-widget-social a:hover span {
+        /* Newsletter Input Improvement */
+        .dgm-footer-widget-input {
+            position: relative;
+            display: flex;
+            align-items: stretch;
+        }
+
+        .dgm-footer-widget-input form {
+            display: flex;
+            width: 100%;
+            position: relative;
+        }
+
+        .dgm-footer-widget-input input {
+            background: rgba(255, 255, 255, 0.05) !important;
+            border: 1px solid rgba(255, 255, 255, 0.15) !important;
+            border-radius: 12px !important;
+            border-top-right-radius: 0 !important;
+            border-bottom-right-radius: 0 !important;
             color: #ffffff !important;
+            padding: 16px 20px !important;
+            font-family: 'Inter', sans-serif !important;
+            font-size: 14px !important;
+            transition: all 0.3s ease;
+            flex: 1;
+            min-width: 0;
+            height: 52px;
         }
 
-        .input-button:hover span svg {
-            fill: #ffffff !important;
+        .dgm-footer-widget-input input::placeholder {
+            color: rgba(255, 255, 255, 0.35) !important;
+        }
+
+        .dgm-footer-widget-input input:focus {
+            border-color: rgba(255, 255, 255, 0.3) !important;
+            background: rgba(255, 255, 255, 0.08) !important;
+            outline: none;
+        }
+
+        .dgm-footer-widget-input .input-button {
+            background: #ffffff !important;
+            color: #000000 !important;
+            border-radius: 0 12px 12px 0 !important;
+            height: 52px;
+            width: 52px;
+            min-width: 52px;
+            border: none !important;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            position: relative;
+            flex-shrink: 0;
+        }
+
+        .dgm-footer-widget-input .input-button:hover {
+            background: #EAEAEA !important;
+        }
+
+        .dgm-footer-widget-input .input-button i {
+            color: #000000 !important;
+            font-size: 16px;
+        }
+
+        /* Social Icons */
+        .dgm-footer-widget-social a {
+            width: 44px;
+            height: 44px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.04);
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+        }
+
+        .dgm-footer-widget-social a:last-child {
+            margin-right: 0;
+        }
+
+        .dgm-footer-widget-social a i {
+            font-size: 16px;
+            line-height: 1;
+        }
+
+        .dgm-footer-widget-social a:hover {
+            background: #ffffff;
+            border-color: #ffffff;
+            color: #000000 !important;
+            transform: translateY(-3px);
+        }
+
+        .dgm-footer-widget-social a:hover i {
+            color: #000000 !important;
+        }
+
+        /* Copyright Area */
+        .tp-copyright-2-area {
+            border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
+            padding: 40px 0 !important;
+            margin-top: 40px;
+        }
+
+        .tp-copyright-2-left p, 
+        .tp-copyright-2-menu ul li a,
+        .tp-copyright-2-middle a {
+            font-family: 'Inter', sans-serif !important;
+            color: rgba(255, 255, 255, 0.4) !important;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .tp-copyright-2-menu ul li a:hover,
+        .tp-copyright-2-middle a:hover {
             color: #ffffff !important;
+            transform: none;
         }
 
+        /* ===== MOBILE FIRST RESPONSIVE FOOTER ===== */
+        
+        /* Base Mobile Styles (320px+) */
+        .dgm-footer-area {
+            padding: 60px 0 40px !important;
+        }
+
+        .dgm-footer-widget {
+            margin-bottom: 40px;
+        }
+
+        .dgm-footer-logo img {
+            max-width: 120px !important;
+            height: auto;
+        }
+
+        .dgm-footer-widget-title {
+            font-size: 13px !important;
+            margin-bottom: 20px !important;
+        }
+
+        .dgm-footer-widget-paragraph p {
+            font-size: 14px !important;
+        }
+
+        .dgm-footer-widget-menu ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .dgm-footer-widget-menu ul li {
+            margin-bottom: 8px;
+        }
+
+        .dgm-footer-widget-menu ul li a {
+            font-size: 14px !important;
+            margin-bottom: 0 !important;
+        }
+
+        /* Social Icons Mobile */
+        .dgm-footer-widget-social {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .dgm-footer-widget-social a {
+            width: 40px;
+            height: 40px;
+            margin-right: 0 !important;
+        }
+
+        .dgm-footer-widget-social a span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .dgm-footer-widget-social a span svg {
+            width: 14px;
+            height: 14px;
+        }
+
+        /* Newsletter Mobile */
+        .dgm-footer-widget-input {
+            position: relative;
+        }
+
+        .dgm-footer-widget-input form {
+            display: flex;
+            position: relative;
+        }
+
+        .dgm-footer-widget-input input {
+            height: 52px !important;
+            font-size: 14px !important;
+            padding: 14px 60px 14px 18px !important;
+        }
+
+        .dgm-footer-widget-input .input-button {
+            width: 52px !important;
+            height: 52px !important;
+        }
+
+        /* Copyright Mobile */
+        .tp-copyright-2-area {
+            padding: 24px 0 !important;
+            margin-top: 0 !important;
+        }
+
+        .tp-copyright-2-left p {
+            font-size: 12px !important;
+            margin-bottom: 16px;
+        }
+
+        .tp-copyright-2-menu ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 16px;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .tp-copyright-2-menu ul li {
+            margin: 0 !important;
+        }
+
+        .tp-copyright-2-menu ul li a {
+            font-size: 12px !important;
+        }
+
+        .tp-copyright-2-middle {
+            display: none;
+        }
+
+        /* Tablet Styles (768px+) */
+        @media (min-width: 768px) {
+            .dgm-footer-area {
+                padding: 80px 0 50px !important;
+            }
+
+            .dgm-footer-logo img {
+                max-width: 140px !important;
+            }
+
+            .dgm-footer-widget-title {
+                font-size: 14px !important;
+                margin-bottom: 24px !important;
+            }
+
+            .dgm-footer-widget-paragraph p,
+            .dgm-footer-widget-menu ul li a {
+                font-size: 15px !important;
+            }
+
+            .dgm-footer-widget-social a {
+                width: 44px;
+                height: 44px;
+            }
+
+            .dgm-footer-widget-social a span svg {
+                width: 16px;
+                height: 16px;
+            }
+
+            .dgm-footer-widget-input input {
+                height: 56px !important;
+                font-size: 15px !important;
+                padding: 16px 70px 16px 20px !important;
+            }
+
+            .dgm-footer-widget-input .input-button {
+                width: 56px !important;
+                height: 56px !important;
+            }
+
+            .tp-copyright-2-area {
+                padding: 30px 0 !important;
+            }
+
+            .tp-copyright-2-left p,
+            .tp-copyright-2-menu ul li a {
+                font-size: 13px !important;
+            }
+
+            .tp-copyright-2-left p {
+                margin-bottom: 0;
+            }
+        }
+
+        /* Desktop Styles (992px+) */
+        @media (min-width: 992px) {
+            .dgm-footer-area {
+                padding: 100px 0 60px !important;
+            }
+
+            .dgm-footer-logo img {
+                max-width: 150px !important;
+            }
+
+            .dgm-footer-widget-title {
+                font-size: 15px !important;
+                margin-bottom: 30px !important;
+            }
+
+            .dgm-footer-widget-social a {
+                margin-right: 12px !important;
+            }
+
+            .tp-copyright-2-middle {
+                display: block;
+            }
+
+            .tp-copyright-2-area {
+                padding: 40px 0 !important;
+            }
+
+            .tp-copyright-2-left p,
+            .tp-copyright-2-menu ul li a,
+            .tp-copyright-2-middle a {
+                font-size: 14px !important;
+            }
+        }
+
+        /* Hero Mobile Overrides */
         @media (max-width: 767px) {
             .creative-2-hero-wrap {
                 padding-top: 100px;
@@ -417,54 +771,40 @@
 
             </main>
 
-            <footer class="pb-20">
+            <footer>
 
                 <div class="dgm-footer-bg p-relative">
 
                     <!-- footer area start -->
-                    <div class="dgm-footer-area black-bg-5 pt-100 pb-60">
+                    <div class="dgm-footer-area black-bg-7">
                         <div class="container container-1430">
                             <div class="row">
-                                <div class="col-xl-4 col-lg-4 col-md-6 mb-40">
+                                <!-- Logo & Social Column -->
+                                <div class="col-12 col-md-6 col-lg-4 mb-40">
                                     <div class="dgm-footer-widget dgm-footer-col-1 z-index-1 tp_fade_anim" data-delay=".3">
-                                        <div class="dgm-footer-logo mb-30">
-                                            <a href="index.html"><img data-width="150px" src="assets/img/9Yards-Film/Logos/2D/9Yards-Film-2D-Logo-nav.png" alt=""></a>
+                                        <div class="dgm-footer-logo mb-25">
+                                            <a href="index.html"><img src="assets/img/9Yards-Film/Logos/2D/9Yards-Film-2D-Logo-nav.png" alt="9Yards Film Logo"></a>
                                         </div>
-                                        <div class="dgm-footer-widget-paragraph mb-35">
-                                            <p>Cinematic storytelling from the heart of Kampala.</p>
+                                        <div class="dgm-footer-widget-paragraph mb-25">
+                                            <p>Cinematic storytelling from the heart of Kampala. Trusted by Uganda's top artists and brands for professional film production.</p>
                                         </div>
                                         <div class="dgm-footer-widget-social">
-                                            <a href="https://www.instagram.com/9yards_content_house/" target="_blank">
-                                                <span>
-                                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <g>
-                                                            <path d="M11.5 1H4.5C2.567 1 1 2.567 1 4.5V11.5C1 13.433 2.567 15 4.5 15H11.5C13.433 15 15 13.433 15 11.5V4.5C15 2.567 13.433 1 11.5 1Z" stroke="currentcolor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                            <path d="M10.8002 7.55921C10.8866 8.14178 10.7871 8.73676 10.5158 9.25952C10.2446 9.78228 9.81539 10.2062 9.28932 10.471C8.76326 10.7358 8.1671 10.8279 7.58564 10.7344C7.00417 10.6408 6.46702 10.3663 6.05057 9.94982C5.63413 9.53338 5.3596 8.99622 5.26603 8.41476C5.17247 7.8333 5.26463 7.23714 5.52941 6.71107C5.7942 6.18501 6.21812 5.75583 6.74087 5.48458C7.26363 5.21333 7.85861 5.11382 8.44119 5.20021C9.03543 5.28833 9.58558 5.56524 10.0104 5.99003C10.4352 6.41482 10.7121 6.96497 10.8002 7.55921Z" stroke="currentcolor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                            <path d="M11.8501 4.15039H11.8571" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                                        </g>
-                                                    </svg>
-                                                </span>
+                                            <a href="https://www.instagram.com/9yards_content_house/" target="_blank" aria-label="Instagram">
+                                                <i class="fab fa-instagram"></i>
                                             </a>
-                                            <a href="#" target="_blank">
-                                                <span>
-                                                    <svg width="16" height="16" viewBox="0 0 448 512" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M448 209.91a210.06 210.06 0 0 1-122.77-39.25V349.38A162.55 162.55 0 1 1 185 188.31V278.2a74.62 74.62 0 1 0 52.23 71.18V0l88 0a121.18 121.18 0 0 0 1.86 22.17h0A122.18 122.18 0 0 0 381 102.39a121.43 121.43 0 0 0 67 20.14Z"/>
-                                                    </svg>
-                                                </span>
+                                            <a href="#" target="_blank" aria-label="TikTok">
+                                                <i class="fab fa-tiktok"></i>
                                             </a>
-                                            <a href="https://www.youtube.com/@9Yards-ch" target="_blank">
-                                                <span>
-                                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M15.5 4.5C15.5 4.5 15.4 3.8 15.1 3.5C14.7 3.1 14.3 3.1 14.1 3.1C12.7 3 8 3 8 3C8 3 3.3 3 1.9 3.1C1.7 3.1 1.3 3.1 0.9 3.5C0.6 3.8 0.5 4.5 0.5 4.5C0.5 4.5 0.4 5.4 0.4 6.3V7.7C0.4 8.6 0.5 9.5 0.5 9.5C0.5 9.5 0.6 10.2 0.9 10.5C1.3 10.9 1.8 10.9 2 10.9C2.8 11 8 11 8 11C8 11 12.7 11 14.1 10.9C14.3 10.9 14.7 10.9 15.1 10.5C15.4 10.2 15.5 9.5 15.5 9.5C15.5 9.5 15.6 8.6 15.6 7.7V6.3C15.6 5.4 15.5 4.5 15.5 4.5ZM6.4 9.1V4.9L10.6 7L6.4 9.1Z" fill="currentcolor" />
-                                                    </svg>
-                                                </span>
+                                            <a href="https://www.youtube.com/@9Yards-ch" target="_blank" aria-label="YouTube">
+                                                <i class="fab fa-youtube"></i>
                                             </a>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-xl-2 col-lg-2  col-md-3 mb-40">
+                                <!-- Services Column -->
+                                <div class="col-6 col-md-3 col-lg-2 mb-40">
                                     <div class="dgm-footer-widget dgm-footer-col-2 tp_fade_anim" data-delay=".4">
-                                        <h4 class="dgm-footer-widget-title">Service</h4>
+                                        <h4 class="dgm-footer-widget-title">Services</h4>
                                         <div class="dgm-footer-widget-menu">
                                             <ul>
                                                 <li><a href="services.html#music-videos">Music Videos</a></li>
@@ -477,7 +817,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-xl-2 col-lg-2 col-md-3 mb-40">
+                                <!-- Company Column -->
+                                <div class="col-6 col-md-3 col-lg-2 mb-40">
                                     <div class="dgm-footer-widget dgm-footer-col-3 tp_fade_anim" data-delay=".5">
                                         <h4 class="dgm-footer-widget-title">Company</h4>
                                         <div class="dgm-footer-widget-menu">
@@ -491,27 +832,18 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-xl-4 col-lg-4 col-md-6 mb-40">
+                                <!-- Newsletter Column -->
+                                <div class="col-12 col-lg-4 mb-40">
                                     <div class="dgm-footer-widget dgm-footer-col-4 z-index-1 tp_fade_anim" data-delay=".6">
                                         <h4 class="dgm-footer-widget-title">Newsletter</h4>
-                                        <div class="dgm-footer-widget-paragraph color-style mb-35">
-                                            <p>Subscribe our newsletter to get the <br> latest news and updates!</p>
+                                        <div class="dgm-footer-widget-paragraph color-style mb-25">
+                                            <p>Subscribe to get the latest news and updates!</p>
                                         </div>
                                         <div class="dgm-footer-widget-input p-relative">
                                             <form action="#">
-                                                <input type="text" placeholder="Enter your email">
-                                                <span class="input-icon">
-                                                    <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M16 2.5C16 1.675 15.325 1 14.5 1H2.5C1.675 1 1 1.675 1 2.5M16 2.5V11.5C16 12.325 15.325 13 14.5 13H2.5C1.675 13 1 12.325 1 11.5V2.5M16 2.5L8.5 7.74998L1 2.5" stroke="#A1A4AA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                    </svg>
-                                                </span>
-                                                <button class="input-button" type="submit">
-                                                    <span>
-                                                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M17.4918 0.523919C17.0417 0.0609703 16.3754 -0.110257 15.7541 0.0709359L1.2672 4.28277C0.611729 4.46578 0.147138 4.98852 0.0219872 5.65169C-0.105865 6.32754 0.340718 7.18639 0.924156 7.54515L5.45391 10.3283C5.9185 10.6146 6.51815 10.543 6.9026 10.1552L12.0896 4.93597C12.3507 4.66328 12.7829 4.66328 13.044 4.93597C13.3051 5.1978 13.3051 5.62451 13.044 5.8963L7.84799 11.1156C7.46263 11.5033 7.3906 12.1049 7.67422 12.5733L10.442 17.1484C10.7661 17.6911 11.3243 18 11.9366 18C12.0086 18 12.0896 18 12.1617 17.99C12.8639 17.9003 13.4222 17.4193 13.6293 16.7398L17.924 2.27243C18.1131 1.65638 17.942 0.985961 17.4918 0.523919Z" fill="currentcolor" />
-                                                            <path opacity="0.4" d="M6.7091 15.5302C6.97201 15.7957 6.97201 16.226 6.7091 16.4915L5.47919 17.7281C5.34774 17.8613 5.17487 17.9274 5.002 17.9274C4.82913 17.9274 4.65626 17.8613 4.5248 17.7281C4.261 17.4627 4.261 17.0332 4.5248 16.7678L5.75381 15.5302C6.01761 15.2657 6.44529 15.2657 6.7091 15.5302ZM6.00348 12.0984C6.26639 12.3639 6.26639 12.7942 6.00348 13.0597L4.77358 14.2963C4.64212 14.4295 4.46925 14.4956 4.29638 14.4956C4.12351 14.4956 3.95064 14.4295 3.81919 14.2963C3.55538 14.0309 3.55538 13.6014 3.81919 13.336L5.04819 12.0984C5.312 11.8339 5.73967 11.8339 6.00348 12.0984ZM2.61701 11.0182C2.87992 11.2836 2.87992 11.714 2.61701 11.9794L1.38711 13.216C1.25566 13.3492 1.08279 13.4154 0.909915 13.4154C0.737044 13.4154 0.564173 13.3492 0.432719 13.216C0.168911 12.9506 0.168911 12.5212 0.432719 12.2557L1.66172 11.0182C1.92553 10.7536 2.35321 10.7536 2.61701 11.0182Z" fill="currentcolor" />
-                                                        </svg>
-                                                    </span>
+                                                <input type="email" placeholder="Enter your email" required>
+                                                <button class="input-button" type="submit" aria-label="Subscribe">
+                                                    <i class="fas fa-paper-plane"></i>
                                                 </button>
                                             </form>
                                         </div>
@@ -523,19 +855,19 @@
                     <!-- footer area end -->
 
                     <!-- copyright area start -->
-                    <div class="tp-copyright-2-area tp-copyright-2-border black-bg-5">
+                    <div class="tp-copyright-2-area tp-copyright-2-border black-bg-7">
                         <div class="container container-1430">
-                            <div class="row align-items-center">
-                                <div class="col-xl-4 col-lg-5 col-md-6">
+                            <div class="row align-items-center justify-content-between">
+                                <div class="col-12 col-md-6 col-lg-4 order-2 order-md-1">
                                     <div class="tp-copyright-2-left text-center text-md-start z-index-1">
                                         <p>© <span id="footer-year"></span> 9Yards Film. All Rights Reserved.</p>
                                     </div>
                                 </div>
-                                <div class="col-xl-3 col-lg-3 d-none d-lg-block">
-                                    <div class="tp-copyright-2-middle">
+                                <div class="col-lg-3 d-none d-lg-block order-2">
+                                    <div class="tp-copyright-2-middle text-center">
                                         <a href="mailto:film@9yards.co.ug">
                                             <span>
-                                                <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <svg width="16" height="14" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M13 14.6H5C2.6 14.6 1 13.4 1 10.6V5C1 2.2 2.6 1 5 1H13C15.4 1 17 2.2 17 5V10.6C17 13.4 15.4 14.6 13 14.6Z" stroke="currentcolor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
                                                     <path d="M13 5.40039L10.496 7.40039C9.672 8.05639 8.32 8.05639 7.496 7.40039L5 5.40039" stroke="currentcolor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
                                                 </svg>
@@ -544,12 +876,12 @@
                                         </a>
                                     </div>
                                 </div>
-                                <div class="col-xl-5 col-lg-4 col-md-6">
+                                <div class="col-12 col-md-6 col-lg-5 order-1 order-md-3 mb-3 mb-md-0">
                                     <div class="tp-copyright-2-right">
-                                        <div class="tp-copyright-2-menu text-md-end text-center">
+                                        <div class="tp-copyright-2-menu text-center text-md-end">
                                             <ul>
-                                                <li><a href="privacy-policy.html">Privacy policy </a></li>
-                                                <li><a href="terms-of-service.html">Terms and conditions</a></li>
+                                                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                                                <li><a href="terms-of-service.html">Terms & Conditions</a></li>
                                             </ul>
                                         </div>
                                     </div>
