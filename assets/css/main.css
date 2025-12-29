@@ -1999,6 +1999,24 @@ input[type=color] {
   color: var(--tp-common-white);
   background-color: var(--tp-common-black);
 }
+
+.tp-btn-custom {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #EAEAEA;
+  color: #000000;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.tp-btn-custom:hover {
+  background-color: #d0d0d0;
+  color: #000000;
+}
 .tp-btn-white-border:hover {
   color: var(--tp-common-white);
   background-color: transparent;
