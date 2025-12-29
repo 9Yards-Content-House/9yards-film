@@ -45,6 +45,45 @@
     <!-- CSS here -->
     <!-- CSS here -->
 
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        .gear-heading {
+            font-family: 'Inter', sans-serif !important;
+            font-weight: 700 !important;
+            background: linear-gradient(87.11deg, #ffffff 17.87%, rgba(255, 255, 255, 0.9) 45.18%, rgba(255, 255, 255, 0.86) 57.76%);
+            -webkit-background-clip: text !important;
+            -webkit-text-fill-color: transparent !important;
+            background-clip: text !important;
+            text-fill-color: transparent !important;
+            text-shadow: 0px 4px 24px rgba(0, 0, 0, 0.5); /* Softened shadow for text clip compatibility */
+            line-height: 1.15;
+            letter-spacing: 0.01em;
+            display: inline-block; /* Essential for background-clip: text in some cases */
+        }
+
+        @media (max-width: 767px) {
+            .gear-heading {
+                font-size: 32px !important;
+                line-height: 1.2;
+            }
+            .creative-2-hero-title.gear-heading {
+                font-size: 36px !important;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .gear-heading {
+                font-size: 44px !important;
+            }
+            .creative-2-hero-title.gear-heading {
+                font-size: 56px !important; /* Slightly larger for the main hero */
+            }
+        }
+    </style>
 </head>
 
 <body class="tp-magic-cursor black-bg-7">
@@ -193,47 +232,43 @@
             <main>
 
                 <!-- hero area start -->
-                <div class="creative-hero-wrap">
-                    <div class="creative-hero-area creative-hero-bg z-index-5">
-                        <div class="container container-1230">
-                            <div class="row">
-                                <div class="col-xl-12">
-                                    <div class="creative-hero-title-box p-relative">
-                                        <h2 class="creative-hero-title">
-                                            <em>
-                                                <span>Artistic</span><br>
-                                                Gateway T <img class="d-none d-md-inline-block" src="assets/img/home-04/hero/hero-shape-1.png" alt="">
-                                            </em>
-                                            <i>Limitless Design</i>
+                <div class="creative-2-hero-wrap pt-180">
+                    <div class="container container-1610">
+                        <div class="creative-2-hero-top-wrap mb-60">
+                            <div class="row align-items-end">
+                                <div class="col-xl-6">
+                                    <div class="creative-2-hero-title-box">
+                                        <h2 class="creative-2-hero-title gear-heading text-white text-start">
+                                            Going all the way for you!
                                         </h2>
-                                        <div class="creative-hero-btn">
-                                            <a href="portfolio-details-classic-stack.html" class="tp-btn-custom mr-15">Browse Equipment</a>
-                                            <a href="contact.html" class="tp-btn-custom">Contact Us</a>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6">
+                                    <div class="creative-2-hero-btn-wrap">
+                                        <div class="row">
+                                            <div class="col-xl-8">
+                                                <div class="creative-2-hero-btn-wrap text-xl-end">
+                                                    <div class="creative-2-hero-btn">
+                                                        <a href="portfolio-details-classic-stack.html" class="tp-btn-custom mr-15">View our work</a>
+                                                        <a href="team-dark.html" class="tp-btn-custom">Meet the team</a>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="creative-hero-banner-area">
-                        <div class="container container-1580">
+                    <div class="creative-2-hero-banner-area">
+                        <div class="container-fluid">
                             <div class="row">
                                 <div class="col-xl-12">
-                                    <div class="creative-hero-banner-wrap p-relative">
-                                        <span class="creative-hero-black-box"></span>
+                                    <div class="creative-hero-banner-wrap">
                                         <div class="creative-hero-banner">
                                             <video loop="" muted="" autoplay="" playsinline="">
                                                 <source src="assets/img/9Yards-Film/Videos/Spice Diana - Nzigulawo.mp4" type="video/mp4">
                                             </video>
-                                            <div class="creative-hero-avater-box d-flex align-items-center">
-                                                <div class="creative-hero-avater">
-                                                    <img src="assets/img/home-04/avater/avater-1.jpg" alt="">
-                                                </div>
-                                                <div class="creative-hero-avater-info">
-                                                    <h4>Hear from Dang</h4>
-                                                    <span>Co-Founder of Agntix</span>
-                                                </div>
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -413,7 +448,7 @@
                                 <div class="creative-project-item pl-90 mt-25 mb-100">
                                     <div class="creative-project-title-box">
                                         <span class="tp-section-subtitle mb-20 fs-17 pre-circle tp_fade_anim" data-delay=".3">Featured Works</span>
-                                        <h4 class="tp-section-title fs-64 tp_fade_anim" data-delay=".5">Take a look <br> at our projects</h4>
+                                        <h4 class="tp-section-title gear-heading tp_fade_anim" data-delay=".5">Take a look <br> at our projects</h4>
                                     </div>
                                 </div>
                                 <div class="creative-project-item mb-100">
@@ -475,7 +510,7 @@
                             </div>
                             <div class="col-xl-6 col-lg-7">
                                 <div class="creative-blog-title-box">
-                                    <h4 class="tp-section-title fs-44">How we take your <br> business to the next level</h4>
+                                    <h4 class="tp-section-title gear-heading">How we take your <br> business to the next level</h4>
                                 </div>
                             </div>
                             <div class="col-xl-3 col-lg-5">
@@ -618,7 +653,7 @@
                             <div class="col-xl-3 col-lg-4">
                                 <div class="creative-testimonial-title-box mb-25">
                                     <span class="tp-section-subtitle mb-20 fs-17 pre-circle tp_fade_anim" data-delay=".3">Testimonials</span>
-                                    <h4 class="tp-section-title fs-44 tp_fade_anim" data-delay=".5">What our <br> happy clients <br> say about us.</h4>
+                                    <h4 class="tp-section-title gear-heading tp_fade_anim" data-delay=".5">What our <br> happy clients <br> say about us.</h4>
                                 </div>
                                 <div class="creative-testimonial-btn mb-55 tp_fade_anim" data-delay=".7" data-fade-from="top" data-ease="bounce">
                                     <a href="contact.html" class="tp-btn-custom">Let’s chat</a>
