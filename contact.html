@@ -451,91 +451,116 @@
         </section>
 
         <!-- FAQ Section -->
-        <section class="faq-area">
-            <div class="container">
+        <div class="app-faq-area service-faq-style p-relative pb-140">
+            <div class="container container-1230">
                 <div class="row justify-content-center">
                     <div class="col-lg-8">
-                        <div class="faq-heading tp_fade_anim">
-                            <h3>Frequently Asked Questions</h3>
+                        <div class="app-faq-heading p-relative mb-80 text-center tp_fade_anim">
+                            <h3 class="tp-section-title-mango fs-100">Frequently Asked Questions</h3>
                         </div>
-                        
-                        <div class="faq-wrapper tp_fade_anim">
-                            
-                            <details class="faq-item">
-                                <summary class="faq-header">
-                                    <h5 class="faq-question">What's your typical project timeline?</h5>
-                                    <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
-                                </summary>
-                                <div class="faq-body">
-                                    <p>Music videos typically take 2-3 weeks from concept to delivery. Corporate videos and documentaries vary based on scope, but we'll provide a clear timeline in our proposal. Rush projects are available for an additional fee.</p>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="app-faq-wrap tp_fade_anim">
+                            <div class="ai-faq-accordion-wrap">
+                                <div class="accordion" id="faqAccordion">
+                                    <div class="accordion-items">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-buttons" type="button" data-bs-toggle="collapse" data-bs-target="#faqOne" aria-expanded="true" aria-controls="faqOne">
+                                                What's your typical project timeline?
+                                                <span class="accordion-icon"></span>
+                                            </button>
+                                        </h2>
+                                        <div id="faqOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                            <div class="accordion-body">
+                                                <p>Music videos typically take 2-3 weeks from concept to delivery. Corporate videos and documentaries vary based on scope, but we'll provide a clear timeline in our proposal. Rush projects are available for an additional fee.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-items">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-buttons collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqTwo" aria-expanded="false" aria-controls="faqTwo">
+                                                Do you work outside of Kampala?
+                                                <span class="accordion-icon"></span>
+                                            </button>
+                                        </h2>
+                                        <div id="faqTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                            <div class="accordion-body">
+                                                <p>Yes! We serve clients across Uganda and East Africa. Travel and accommodation costs are included in project quotes when applicable.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-items">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-buttons collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqThree" aria-expanded="false" aria-controls="faqThree">
+                                                What's included in your pricing?
+                                                <span class="accordion-icon"></span>
+                                            </button>
+                                        </h2>
+                                        <div id="faqThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                            <div class="accordion-body">
+                                                <p>Our quotes include pre-production planning, filming (crew + equipment), post-production (editing, color grading, sound design), and revisions. We'll provide a detailed breakdown in your proposal.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-items">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-buttons collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqFour" aria-expanded="false" aria-controls="faqFour">
+                                                Can I use my own ideas/script?
+                                                <span class="accordion-icon"></span>
+                                            </button>
+                                        </h2>
+                                        <div id="faqFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                            <div class="accordion-body">
+                                                <p>Absolutely! We love collaborating with clients who have a clear vision. We'll help refine your concept and bring it to life professionally.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-items">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-buttons collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqFive" aria-expanded="false" aria-controls="faqFive">
+                                                Do you offer payment plans?
+                                                <span class="accordion-icon"></span>
+                                            </button>
+                                        </h2>
+                                        <div id="faqFive" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                            <div class="accordion-body">
+                                                <p>Yes, we typically work with a deposit structure: 50% upfront to begin production, 50% upon final delivery. Custom payment schedules available for larger projects.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-items">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-buttons collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqSix" aria-expanded="false" aria-controls="faqSix">
+                                                What equipment do you use?
+                                                <span class="accordion-icon"></span>
+                                            </button>
+                                        </h2>
+                                        <div id="faqSix" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                            <div class="accordion-body">
+                                                <p>We shoot on cinema-grade cameras (Sony FX series, RED, etc.), use professional drones (DJI), cinema lenses, and broadcast lighting. Check our <a href="https://gear.9yards.co.ug" target="_blank">Gear page</a> for full equipment list.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-items">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-buttons collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqSeven" aria-expanded="false" aria-controls="faqSeven">
+                                                Can I rent equipment instead?
+                                                <span class="accordion-icon"></span>
+                                            </button>
+                                        </h2>
+                                        <div id="faqSeven" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                            <div class="accordion-body">
+                                                <p>Yes! Visit <a href="https://gear.9yards.co.ug" target="_blank">gear.9yards.co.ug</a> to browse our rental catalog and rates.</p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                            </details>
-
-                            <details class="faq-item">
-                                <summary class="faq-header">
-                                    <h5 class="faq-question">Do you work outside of Kampala?</h5>
-                                    <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
-                                </summary>
-                                <div class="faq-body">
-                                    <p>Yes! We serve clients across Uganda and East Africa. Travel and accommodation costs are included in project quotes when applicable.</p>
-                                </div>
-                            </details>
-
-                             <details class="faq-item">
-                                <summary class="faq-header">
-                                    <h5 class="faq-question">What's included in your pricing?</h5>
-                                    <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
-                                </summary>
-                                <div class="faq-body">
-                                    <p>Our quotes include pre-production planning, filming (crew + equipment), post-production (editing, color grading, sound design), and revisions. We'll provide a detailed breakdown in your proposal.</p>
-                                </div>
-                            </details>
-
-                             <details class="faq-item">
-                                <summary class="faq-header">
-                                    <h5 class="faq-question">Can I use my own ideas/script?</h5>
-                                    <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
-                                </summary>
-                                <div class="faq-body">
-                                    <p>Absolutely! We love collaborating with clients who have a clear vision. We'll help refine your concept and bring it to life professionally.</p>
-                                </div>
-                            </details>
-
-                             <details class="faq-item">
-                                <summary class="faq-header">
-                                    <h5 class="faq-question">Do you offer payment plans?</h5>
-                                    <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
-                                </summary>
-                                <div class="faq-body">
-                                    <p>Yes, we typically work with a deposit structure: 50% upfront to begin production, 50% upon final delivery. Custom payment schedules available for larger projects.</p>
-                                </div>
-                            </details>
-
-                             <details class="faq-item">
-                                <summary class="faq-header">
-                                    <h5 class="faq-question">What equipment do you use?</h5>
-                                    <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
-                                </summary>
-                                <div class="faq-body">
-                                    <p>We shoot on cinema-grade cameras (Sony FX series, RED, etc.), use professional drones (DJI), cinema lenses, and broadcast lighting. Check our <a href="https://gear.9yards.co.ug" target="_blank" style="color: var(--tp-common-red-3);">Gear page</a> for full equipment list.</p>
-                                </div>
-                            </details>
-
-                             <details class="faq-item">
-                                <summary class="faq-header">
-                                    <h5 class="faq-question">Can I rent equipment instead?</h5>
-                                    <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
-                                </summary>
-                                <div class="faq-body">
-                                    <p>Yes! Visit <a href="https://gear.9yards.co.ug" target="_blank" style="color: var(--tp-common-red-3);">gear.9yards.co.ug</a> to browse our rental catalog and rates.</p>
-                                </div>
-                            </details>
-
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
             </main>
 
             <footer>
