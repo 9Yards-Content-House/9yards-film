@@ -56990,3 +56990,77 @@ body.tp-magic-cursor #magic-cursor {
     }
 }
 
+/* Why Choose Us Section - Custom Styling */
+.why-choose-area {
+    padding: 100px 0;
+}
+
+.why-choose-area .creative-work-bg {
+    padding: 80px 60px;
+    border-radius: 24px;
+    border-top-right-radius: 0;
+}
+
+.why-choose-card-custom {
+    background: #1e1e1e !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    border-radius: 20px !important;
+    padding: 48px 32px !important;
+    min-height: 280px;
+    transition: all 0.3s ease-in-out !important;
+    cursor: pointer;
+}
+
+.why-choose-card-custom:hover {
+    transform: translateY(-8px) !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5) !important;
+    background: #252525 !important;
+    border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.why-choose-card-custom:hover .creative-work-icon i {
+    filter: brightness(1.2);
+    text-shadow: 0 0 20px rgba(255, 87, 34, 0.5);
+}
+
+.why-choose-card-custom .creative-work-icon {
+    margin-bottom: 28px;
+}
+
+.why-choose-card-custom .creative-work-icon i {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Why Choose Us Responsive */
+@media (max-width: 991px) {
+    .why-choose-area .creative-work-bg {
+        padding: 60px 40px;
+    }
+    
+    .why-choose-card-custom {
+        padding: 40px 28px !important;
+        min-height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .why-choose-area {
+        padding: 60px 0;
+    }
+    
+    .why-choose-area .creative-work-bg {
+        padding: 40px 24px;
+        border-radius: 20px;
+        border-top-right-radius: 0;
+    }
+    
+    .why-choose-card-custom {
+        padding: 36px 24px !important;
+        margin-bottom: 20px !important;
+    }
+    
+    .creative-work-title-wrap.mb-80 {
+        margin-bottom: 50px !important;
+    }
+}
+
