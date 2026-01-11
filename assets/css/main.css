@@ -118,6 +118,32 @@
 /*----------------------------------------*/
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Besley:ital,wght@0,400..900;1,400..900&family=Space+Grotesk:wght@300..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Satisfy&family=Teko:wght@300..700&family=Phudu:wght@300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Onest:wght@100..900&display=swap");
 
+/* ========================================
+   9YARDS GEAR-INSPIRED THEME STYLES
+   Clean, Minimal, Dark Modern Aesthetic
+======================================== */
+
+/* 9Yards Gear Color Variables */
+:root {
+  --9y-bg-primary: #0a0a0b;
+  --9y-bg-secondary: #111113;
+  --9y-bg-card: rgba(255, 255, 255, 0.03);
+  --9y-bg-card-hover: rgba(255, 255, 255, 0.06);
+  --9y-text-primary: #ffffff;
+  --9y-text-secondary: rgba(255, 255, 255, 0.7);
+  --9y-text-muted: rgba(255, 255, 255, 0.5);
+  --9y-border-subtle: rgba(255, 255, 255, 0.08);
+  --9y-border-light: rgba(255, 255, 255, 0.15);
+  --9y-accent-light: #eaeaea;
+  --9y-accent-hover: #d0d0d0;
+  --9y-shadow-soft: 0 4px 24px rgba(0, 0, 0, 0.4);
+  --9y-shadow-medium: 0 8px 32px rgba(0, 0, 0, 0.5);
+  --9y-radius-sm: 8px;
+  --9y-radius-md: 12px;
+  --9y-radius-lg: 16px;
+  --9y-radius-xl: 24px;
+}
+
 @keyframes bannerAnimationTwo {
   0% {
     transform: translate(0px, 0px);
@@ -144,240 +170,274 @@
   }
 }
 
+/* 9Yards Gear-Style Heading - Gradient Text */
 .gear-heading {
   font-family: "Inter", sans-serif !important;
   font-weight: 700 !important;
   background: linear-gradient(
     87.11deg,
     #ffffff 17.87%,
-    rgba(255, 255, 255, 0.9) 45.18%,
-    rgba(255, 255, 255, 0.86) 57.76%
+    rgba(255, 255, 255, 0.92) 45.18%,
+    rgba(255, 255, 255, 0.88) 57.76%
   );
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
   background-clip: text !important;
   text-fill-color: transparent !important;
-  text-shadow: 0px 4px 24px rgba(0, 0, 0, 0.5);
   line-height: 1.15;
-  letter-spacing: 0.01em;
+  letter-spacing: -0.02em;
   display: inline-block;
 }
 
-/* Hero Section Layout */
+/* Section Title Style - Gear Inspired */
+.gear-section-title {
+  font-family: "Inter", sans-serif !important;
+  font-weight: 700 !important;
+  font-size: clamp(28px, 5vw, 48px);
+  color: var(--9y-text-primary);
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+}
+
+.gear-section-subtitle {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--9y-text-secondary);
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+/* 9Yards Gear Card Style */
+.gear-card {
+  background: var(--9y-bg-card);
+  border: 1px solid var(--9y-border-subtle);
+  border-radius: var(--9y-radius-lg);
+  padding: 24px;
+  transition: all 0.3s ease;
+}
+
+.gear-card:hover {
+  background: var(--9y-bg-card-hover);
+  border-color: var(--9y-border-light);
+  transform: translateY(-2px);
+}
+
+/* 9Yards Gear Glass Effect */
+.gear-glass {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--9y-radius-md);
+}
+
+/* 9Yards Gear Label/Tag Style */
+.gear-label {
+  display: inline-block;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--9y-text-secondary);
+  padding: 6px 12px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+}
+
+/* Hero Section Layout - 9Yards Gear Style */
 .creative-2-hero-wrap {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-top: 160px;
+  padding-top: 140px;
   padding-bottom: 80px;
+  background: var(--9y-bg-primary);
 }
 
-/* Hero headline responsive styles */
+/* Hero headline responsive styles - 9Yards Gear Style */
 .creative-2-hero-title.gear-heading {
-  font-size: 64px !important;
-  line-height: 1.1 !important;
-  /* margin-bottom: 40px !important; */
+  font-size: clamp(36px, 6vw, 72px) !important;
+  line-height: 1.08 !important;
   max-width: 1100px;
   margin-left: auto !important;
   margin-right: auto !important;
+  letter-spacing: -0.03em !important;
 }
 
-/* Hero subheadline responsive styles */
+/* Hero subheadline - 9Yards Gear Style */
 .hero-subheadline {
-  font-size: 20px;
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
   font-weight: 400;
-  color: rgba(255, 255, 255, 0.9);
-  max-width: 800px;
-  line-height: 1.6;
-  margin-bottom: 48px !important;
+  color: var(--9y-text-secondary);
+  max-width: 720px;
+  line-height: 1.7;
+  margin-bottom: 40px !important;
   margin-left: auto;
   margin-right: auto;
   opacity: 1 !important;
   visibility: visible !important;
+  letter-spacing: -0.01em;
 }
 
 /* Button Container Spacing */
 .creative-2-hero-btn {
-  margin-bottom: 120px !important;
-  margin-top: 80px;
+  margin-bottom: 80px !important;
+  margin-top: 48px;
 }
 
-/* Secondary Button Styling */
-.tp-btn-secondary {
-  display: inline-block;
-  font-size: 16px;
+/* Primary Button - 9Yards Gear Style (Light Button) */
+.tp-btn-custom {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 28px;
+  background-color: var(--9y-accent-light);
+  color: #000000;
+  border-radius: var(--9y-radius-sm);
+  font-family: "Inter", sans-serif;
   font-weight: 600;
-  color: #ffffff;
-  padding: 12px 32px;
-  border-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-  transition: all 0.3s ease;
+  font-size: 15px;
+  transition: all 0.25s ease;
+  text-align: center;
+  line-height: 1.2;
+  border: none;
   text-decoration: none;
+  letter-spacing: -0.01em;
+}
+
+.tp-btn-custom:hover {
+  background-color: var(--9y-accent-hover);
+  color: #000000;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(255, 255, 255, 0.1);
+}
+
+/* Secondary Button - 9Yards Gear Glass Style */
+.tp-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--9y-text-primary);
+  padding: 14px 28px;
+  border-radius: var(--9y-radius-sm);
+  border: 1px solid var(--9y-border-light);
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: all 0.25s ease;
+  text-decoration: none;
+  letter-spacing: -0.01em;
 }
 
 .tp-btn-secondary:hover {
-  background: #ffffff;
-  color: #000000;
-  border-color: #ffffff;
-  transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.25);
+  color: var(--9y-text-primary);
+  transform: translateY(-1px);
 }
 
-/* Video container styling */
+/* Outline Button Style */
+.tp-btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--9y-text-primary);
+  padding: 14px 28px;
+  border-radius: var(--9y-radius-sm);
+  border: 1px solid var(--9y-border-light);
+  background: transparent;
+  transition: all 0.25s ease;
+  text-decoration: none;
+}
+
+.tp-btn-outline:hover {
+  background: var(--9y-text-primary);
+  color: var(--9y-bg-primary);
+  border-color: var(--9y-text-primary);
+}
+
+/* Video container styling - 9Yards Gear Style */
 .hero-video-wrapper {
-  max-width: 1300px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
 .hero-video-wrapper video {
   width: 100%;
-  border-radius: 24px;
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--9y-radius-xl);
+  box-shadow: var(--9y-shadow-medium);
+  border: 1px solid var(--9y-border-subtle);
 }
 
+/* ===== MOBILE RESPONSIVE - HERO ===== */
 @media (max-width: 767px) {
   .creative-2-hero-wrap {
     padding-top: 100px;
+    padding-bottom: 60px;
   }
 
   .gear-heading {
-    font-size: 28px !important;
-    line-height: 1.2;
+    font-size: 32px !important;
+    line-height: 1.15;
   }
 
   .creative-2-hero-title.gear-heading {
     font-size: 36px !important;
-    margin-bottom: 24px !important;
+    margin-bottom: 20px !important;
   }
 
   .hero-subheadline {
-    font-size: 16px;
-    padding: 0 15px;
-    margin-bottom: 32px !important;
+    font-size: 15px;
+    padding: 0 16px;
+    margin-bottom: 28px !important;
   }
 
   .creative-2-hero-btn {
     flex-direction: column;
     width: 100%;
     gap: 12px !important;
-    margin-bottom: 80px !important;
+    margin-bottom: 48px !important;
+    margin-top: 32px;
+    padding: 0 16px;
   }
 
   .creative-2-hero-btn a {
     width: 100%;
     text-align: center;
     justify-content: center;
-    padding: 14px 20px;
+    padding: 16px 24px;
+  }
+
+  .hero-video-wrapper video {
+    border-radius: var(--9y-radius-lg);
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
   .gear-heading {
-    font-size: 44px !important;
+    font-size: 48px !important;
   }
 
   .creative-2-hero-title.gear-heading {
-    font-size: 60px !important;
+    font-size: 56px !important;
   }
 }
 
-.gear-heading {
-  font-family: "Inter", sans-serif !important;
-  font-weight: 700 !important;
-  background: linear-gradient(
-    87.11deg,
-    #ffffff 17.87%,
-    rgba(255, 255, 255, 0.9) 45.18%,
-    rgba(255, 255, 255, 0.86) 57.76%
-  );
-  -webkit-background-clip: text !important;
-  -webkit-text-fill-color: transparent !important;
-  background-clip: text !important;
-  text-fill-color: transparent !important;
-  text-shadow: 0px 4px 24px rgba(0, 0, 0, 0.5);
-  line-height: 1.15;
-  letter-spacing: 0.01em;
-  display: inline-block;
-}
-
-/* Hero Section Layout */
-.creative-2-hero-wrap {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-top: 160px;
-  padding-bottom: 80px;
-}
-
-/* Hero headline responsive styles */
-.creative-2-hero-title.gear-heading {
-  font-size: 64px !important;
-  line-height: 1.1 !important;
-  margin-bottom: 40px !important;
-  max-width: 1100px;
-  margin-left: auto !important;
-  margin-right: auto !important;
-}
-
-/* Hero subheadline responsive styles */
-.hero-subheadline {
-  font-size: 20px;
-  font-weight: 400;
-  color: rgba(255, 255, 255, 0.9);
-  max-width: 800px;
-  line-height: 1.6;
-  margin-bottom: 48px !important;
-  margin-left: auto;
-  margin-right: auto;
-  opacity: 1 !important;
-  visibility: visible !important;
-}
-
-/* Button Container Spacing */
-.creative-2-hero-btn {
-  margin-bottom: 120px !important;
-}
-
-/* Secondary Button Styling */
-.tp-btn-secondary {
-  display: inline-block;
-  font-size: 16px;
-  font-weight: 600;
-  color: #ffffff;
-  padding: 12px 32px;
-  border-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-  transition: all 0.3s ease;
-  text-decoration: none;
-}
-
-.tp-btn-secondary:hover {
-  background: #ffffff;
-  color: #000000;
-  border-color: #ffffff;
-  transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-/* Video container styling */
-.hero-video-wrapper {
-  max-width: 1300px;
-  margin: 0 auto;
-}
-
-.hero-video-wrapper video {
-  width: 100%;
-  border-radius: 24px;
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
+/* ===== 9YARDS GEAR FOOTER STYLES ===== */
 
 /* Footer Hover Effects */
 .dgm-footer-widget-menu ul li a,
@@ -386,48 +446,48 @@
 .tp-copyright-2-left a,
 .dgm-footer-widget-social a span,
 .input-button span {
-  transition: all 0.3s ease;
+  transition: all 0.25s ease;
 }
 
-/* Modern Footer Styling */
+/* Modern Footer Styling - 9Yards Gear Style */
 footer {
   font-family: "Inter", sans-serif !important;
+  background: var(--9y-bg-primary);
 }
 
 .dgm-footer-widget-title {
   font-family: "Inter", sans-serif !important;
-  font-weight: 700 !important;
+  font-weight: 600 !important;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
-  font-size: 15px !important;
-  margin-bottom: 30px !important;
-  color: #ffffff !important;
+  letter-spacing: 0.06em;
+  font-size: 13px !important;
+  margin-bottom: 24px !important;
+  color: var(--9y-text-muted) !important;
 }
 
 .dgm-footer-widget-paragraph p {
   font-family: "Inter", sans-serif !important;
-  color: rgba(255, 255, 255, 0.6) !important;
+  color: var(--9y-text-secondary) !important;
   line-height: 1.7;
-  font-size: 15px;
+  font-size: 14px;
 }
 
 .dgm-footer-widget-menu ul li a {
   font-family: "Inter", sans-serif !important;
-  color: rgba(255, 255, 255, 0.5) !important;
-  font-size: 15px;
+  color: var(--9y-text-secondary) !important;
+  font-size: 14px;
   display: inline-block;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .dgm-footer-widget-menu ul li a:hover,
 .tp-copyright-2-menu ul li a:hover,
 .tp-copyright-2-middle a:hover,
 .tp-copyright-2-left a:hover {
-  color: #ffffff !important;
-  transform: translateX(5px);
+  color: var(--9y-text-primary) !important;
 }
 
-/* Newsletter Input Improvement */
+/* Newsletter Input - 9Yards Gear Style */
 .dgm-footer-widget-input {
   position: relative;
   display: flex !important;
@@ -442,41 +502,41 @@ footer {
 }
 
 .dgm-footer-widget-input input {
-  background: rgba(255, 255, 255, 0.05) !important;
-  border: 1px solid rgba(255, 255, 255, 0.15) !important;
-  border-radius: 12px !important;
+  background: var(--9y-bg-card) !important;
+  border: 1px solid var(--9y-border-subtle) !important;
+  border-radius: var(--9y-radius-sm) !important;
   border-top-right-radius: 0 !important;
   border-bottom-right-radius: 0 !important;
-  color: #ffffff !important;
-  padding: 16px 20px !important;
+  color: var(--9y-text-primary) !important;
+  padding: 14px 16px !important;
   font-family: "Inter", sans-serif !important;
   font-size: 14px !important;
-  transition: all 0.3s ease;
+  transition: all 0.25s ease;
   flex: 1;
   min-width: 0;
-  height: 52px !important;
+  height: 48px !important;
   line-height: 1 !important;
 }
 
 .dgm-footer-widget-input input::placeholder {
-  color: rgba(255, 255, 255, 0.35) !important;
+  color: var(--9y-text-muted) !important;
 }
 
 .dgm-footer-widget-input input:focus {
-  border-color: rgba(255, 255, 255, 0.3) !important;
-  background: rgba(255, 255, 255, 0.08) !important;
+  border-color: var(--9y-border-light) !important;
+  background: var(--9y-bg-card-hover) !important;
   outline: none;
 }
 
 .dgm-footer-widget-input .input-button {
-  background: #ffffff !important;
+  background: var(--9y-accent-light) !important;
   color: #000000 !important;
-  border-radius: 0 12px 12px 0 !important;
-  height: 52px !important;
-  width: 52px !important;
-  min-width: 52px !important;
+  border-radius: 0 var(--9y-radius-sm) var(--9y-radius-sm) 0 !important;
+  height: 48px !important;
+  width: 48px !important;
+  min-width: 48px !important;
   border: none !important;
-  transition: all 0.3s ease;
+  transition: all 0.25s ease;
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
@@ -489,32 +549,32 @@ footer {
 }
 
 .dgm-footer-widget-input .input-button:hover {
-  background: #eaeaea !important;
+  background: var(--9y-accent-hover) !important;
 }
 
 .dgm-footer-widget-input .input-button i {
   color: #000000 !important;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1 !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
 }
 
-/* Social Icons */
+/* Social Icons - 9Yards Gear Style */
 .dgm-footer-widget-social a {
-  width: 44px;
-  height: 44px;
+  width: 40px;
+  height: 40px;
   text-align: center;
-  background: rgba(255, 255, 255, 0.04);
+  background: var(--9y-bg-card);
   border-radius: 50%;
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
-  margin-right: 10px;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: rgba(255, 255, 255, 0.6);
+  margin-right: 8px;
+  transition: all 0.25s ease;
+  border: 1px solid var(--9y-border-subtle);
+  color: var(--9y-text-secondary);
   text-decoration: none;
   line-height: 1 !important;
 }
@@ -524,7 +584,7 @@ footer {
 }
 
 .dgm-footer-widget-social a i {
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1 !important;
   display: flex !important;
   align-items: center !important;
@@ -532,20 +592,20 @@ footer {
 }
 
 .dgm-footer-widget-social a:hover {
-  background: #ffffff !important;
-  border-color: #ffffff !important;
+  background: var(--9y-accent-light) !important;
+  border-color: var(--9y-accent-light) !important;
   color: #000000 !important;
-  transform: translateY(-3px);
+  transform: translateY(-2px);
 }
 
 .dgm-footer-widget-social a:hover i {
   color: #000000 !important;
 }
 
-/* Copyright Area */
+/* Copyright Area - 9Yards Gear Style */
 .tp-copyright-2-area {
-  border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
-  padding: 40px 0 !important;
+  border-top: 1px solid var(--9y-border-subtle) !important;
+  padding: 32px 0 !important;
   margin-top: 40px;
 }
 
@@ -553,26 +613,26 @@ footer {
 .tp-copyright-2-menu ul li a,
 .tp-copyright-2-middle a {
   font-family: "Inter", sans-serif !important;
-  color: rgba(255, 255, 255, 0.4) !important;
-  font-size: 14px;
-  transition: all 0.3s ease;
+  color: var(--9y-text-muted) !important;
+  font-size: 13px;
+  transition: all 0.25s ease;
 }
 
 .tp-copyright-2-menu ul li a:hover,
 .tp-copyright-2-middle a:hover {
-  color: #ffffff !important;
-  transform: none;
+  color: var(--9y-text-primary) !important;
 }
 
-/* ===== MOBILE FIRST RESPONSIVE FOOTER ===== */
+/* ===== MOBILE RESPONSIVE FOOTER - 9Yards Gear Style ===== */
 
 /* Base Mobile Styles (320px+) */
 .dgm-footer-area {
   padding: 60px 0 40px !important;
+  background: var(--9y-bg-primary);
 }
 
 .dgm-footer-widget {
-  margin-bottom: 40px;
+  margin-bottom: 32px;
 }
 
 .dgm-footer-logo img {
@@ -581,12 +641,12 @@ footer {
 }
 
 .dgm-footer-widget-title {
-  font-size: 13px !important;
+  font-size: 12px !important;
   margin-bottom: 20px !important;
 }
 
 .dgm-footer-widget-paragraph p {
-  font-size: 14px !important;
+  font-size: 13px !important;
 }
 
 .dgm-footer-widget-menu ul {
@@ -596,24 +656,24 @@ footer {
 }
 
 .dgm-footer-widget-menu ul li {
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 .dgm-footer-widget-menu ul li a {
-  font-size: 14px !important;
+  font-size: 13px !important;
   margin-bottom: 0 !important;
 }
 
 /* Social Icons Mobile */
 .dgm-footer-widget-social {
   display: flex;
-  gap: 10px;
+  gap: 8px;
   flex-wrap: wrap;
 }
 
 .dgm-footer-widget-social a {
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
   margin-right: 0 !important;
 }
 
@@ -639,14 +699,14 @@ footer {
 }
 
 .dgm-footer-widget-input input {
-  height: 52px !important;
-  font-size: 14px !important;
-  padding: 14px 18px !important;
+  height: 44px !important;
+  font-size: 13px !important;
+  padding: 12px 14px !important;
 }
 
 .dgm-footer-widget-input .input-button {
-  width: 52px !important;
-  height: 52px !important;
+  width: 44px !important;
+  height: 44px !important;
 }
 
 /* Copyright Mobile */
@@ -685,51 +745,51 @@ footer {
 /* Tablet Styles (768px+) */
 @media (min-width: 768px) {
   .dgm-footer-area {
-    padding: 80px 0 50px !important;
+    padding: 72px 0 48px !important;
   }
 
   .dgm-footer-logo img {
-    max-width: 140px !important;
+    max-width: 130px !important;
   }
 
   .dgm-footer-widget-title {
-    font-size: 14px !important;
-    margin-bottom: 24px !important;
+    font-size: 12px !important;
+    margin-bottom: 20px !important;
   }
 
   .dgm-footer-widget-paragraph p,
   .dgm-footer-widget-menu ul li a {
-    font-size: 15px !important;
+    font-size: 14px !important;
   }
 
   .dgm-footer-widget-social a {
-    width: 44px;
-    height: 44px;
+    width: 40px;
+    height: 40px;
   }
 
   .dgm-footer-widget-social a span svg {
-    width: 16px;
-    height: 16px;
+    width: 15px;
+    height: 15px;
   }
 
   .dgm-footer-widget-input input {
-    height: 56px !important;
-    font-size: 15px !important;
-    padding: 16px 20px !important;
+    height: 48px !important;
+    font-size: 14px !important;
+    padding: 14px 16px !important;
   }
 
   .dgm-footer-widget-input .input-button {
-    width: 56px !important;
-    height: 56px !important;
+    width: 48px !important;
+    height: 48px !important;
   }
 
   .tp-copyright-2-area {
-    padding: 30px 0 !important;
+    padding: 28px 0 !important;
   }
 
   .tp-copyright-2-left p,
   .tp-copyright-2-menu ul li a {
-    font-size: 13px !important;
+    font-size: 12px !important;
   }
 
   .tp-copyright-2-left p {
@@ -740,20 +800,20 @@ footer {
 /* Desktop Styles (992px+) */
 @media (min-width: 992px) {
   .dgm-footer-area {
-    padding: 100px 0 60px !important;
+    padding: 80px 0 56px !important;
   }
 
   .dgm-footer-logo img {
-    max-width: 150px !important;
+    max-width: 140px !important;
   }
 
   .dgm-footer-widget-title {
-    font-size: 15px !important;
-    margin-bottom: 30px !important;
+    font-size: 13px !important;
+    margin-bottom: 24px !important;
   }
 
   .dgm-footer-widget-social a {
-    margin-right: 12px !important;
+    margin-right: 10px !important;
   }
 
   .tp-copyright-2-middle {
@@ -761,58 +821,17 @@ footer {
   }
 
   .tp-copyright-2-area {
-    padding: 40px 0 !important;
+    padding: 32px 0 !important;
   }
 
   .tp-copyright-2-left p,
   .tp-copyright-2-menu ul li a,
   .tp-copyright-2-middle a {
-    font-size: 14px !important;
+    font-size: 13px !important;
   }
 }
 
-/* Hero Mobile Overrides */
-@media (max-width: 767px) {
-  .creative-2-hero-wrap {
-    padding-top: 100px;
-  }
-
-  .gear-heading {
-    font-size: 28px !important;
-    line-height: 1.2;
-  }
-
-  .creative-2-hero-title.gear-heading {
-    font-size: 36px !important;
-    margin-bottom: 24px !important;
-  }
-
-  .hero-subheadline {
-    font-size: 16px;
-    padding: 0 15px;
-    margin-bottom: 32px !important;
-  }
-
-  .creative-2-hero-btn {
-    flex-direction: column;
-    width: 100%;
-    gap: 12px !important;
-    margin-bottom: 80px !important;
-  }
-
-  .creative-2-hero-btn a {
-    width: 100%;
-    text-align: center;
-    justify-content: center;
-    padding: 14px 20px;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  .gear-heading {
-    font-size: 44px !important;
-  }
-}
+/* Hero Mobile Overrides - Already defined above */
 
 .back-to-top-wrapper,
 a,
@@ -1077,13 +1096,13 @@ li,
   @color declaration
   */
   --tp-common-white: #ffffff;
-  --tp-common-black: #141414;
+  --tp-common-black: #0a0a0b;
   --tp-common-black-2: #232323;
   --tp-common-black-3: #000;
   --tp-common-black-4: #0a0a0a;
   --tp-common-black-5: #121212;
   --tp-common-black-6: #212121;
-  --tp-common-black-7: #0e0f11;
+  --tp-common-black-7: #0a0a0b;
   --tp-common-black-8: #1a1b1e;
   --tp-common-black-9: #16302f;
   --tp-common-black-10: #21212d;
@@ -1113,12 +1132,12 @@ li,
   --tp-coffe-2: #552411;
   --tp-cream-1: #b7ab98;
   --tp-cream-2: #cfc292;
-  --tp-text-body: #2e2d2d;
+  --tp-text-body: rgba(255, 255, 255, 0.7);
   --tp-theme-green: #a0ff27;
   --tp-theme-pink: #ec6fd5;
   --tp-theme-yellow: #ffb701;
-  --tp-border-1: #eaebed;
-  --tp-border-2: #e7e7e7;
+  --tp-border-1: rgba(255, 255, 255, 0.08);
+  --tp-border-2: rgba(255, 255, 255, 0.08);
 }
 
 * {
@@ -2995,23 +3014,7 @@ input[type="color"] {
   background-color: var(--tp-common-black);
 }
 
-.tp-btn-custom {
-  display: inline-block;
-  padding: 12px 24px;
-  background-color: #eaeaea;
-  color: #000000;
-  border-radius: 8px;
-  font-weight: 600;
-  font-size: 16px;
-  transition: all 0.3s ease;
-  text-align: center;
-  line-height: 1.2;
-}
-
-.tp-btn-custom:hover {
-  background-color: #d0d0d0;
-  color: #000000;
-}
+/* tp-btn-custom is defined in 9Yards Gear Theme section above */
 
 .tp-btn-white-border:hover {
   color: var(--tp-common-white);
@@ -57249,17 +57252,28 @@ body.tp-magic-cursor #magic-cursor {
 /* Ensure placeholder text is visible and matches theme */
 .custom-form-input input::placeholder,
 .custom-form-input textarea::placeholder {
-    color: rgba(255, 255, 255, 0.4) !important;
+    color: var(--9y-text-muted) !important;
 }
 
 
-/* Contact Hero Redesign - Dark & Premium */
+/* ===== CONTACT PAGE - 9YARDS GEAR STYLE ===== */
 .contact-hero-area {
-    background-color: #050505; /* Deep dark background */
-    padding: 160px 0 100px 0;
+    background: var(--9y-bg-primary);
+    padding: 160px 0 80px 0;
     position: relative;
     overflow: hidden;
-    background-image: radial-gradient(circle at 50% 50%, rgba(33, 34, 130, 0.15), transparent 70%); /* Subtle glow */
+}
+
+.contact-hero-area::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse at 50% 0%, rgba(255, 255, 255, 0.03), transparent 60%);
+    pointer-events: none;
 }
 
 /* Ensure gear-heading overrides */
@@ -57270,36 +57284,339 @@ body.tp-magic-cursor #magic-cursor {
 
 @media (max-width: 767px) {
     .contact-hero-content .gear-heading {
-        font-size: 40px !important;
+        font-size: 36px !important;
     }
 }
 
-/* Fix Dropdowns - Explicit Dark Theme */
+/* Form Styling - 9Yards Gear Style */
+.custom-form-wrapper {
+    background: var(--9y-bg-card);
+    border: 1px solid var(--9y-border-subtle);
+    border-radius: var(--9y-radius-lg);
+    padding: 40px;
+}
+
+.custom-form-heading h4 {
+    font-family: "Inter", sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--9y-text-primary);
+    margin-bottom: 32px;
+    letter-spacing: -0.02em;
+}
+
+.custom-form-input label {
+    font-family: "Inter", sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--9y-text-secondary);
+    margin-bottom: 8px;
+    display: block;
+}
+
+.custom-form-input input,
+.custom-form-input textarea {
+    background: rgba(255, 255, 255, 0.03) !important;
+    border: 1px solid var(--9y-border-subtle) !important;
+    border-radius: var(--9y-radius-sm) !important;
+    color: var(--9y-text-primary) !important;
+    font-family: "Inter", sans-serif !important;
+    font-size: 15px !important;
+    padding: 14px 16px !important;
+    transition: all 0.25s ease;
+}
+
+.custom-form-input input:focus,
+.custom-form-input textarea:focus {
+    border-color: var(--9y-border-light) !important;
+    background: rgba(255, 255, 255, 0.05) !important;
+    outline: none;
+}
+
+/* Dropdowns - 9Yards Gear Style */
 .custom-form-input select {
     appearance: none;
     -moz-appearance: none;
     -webkit-appearance: none;
-    background-color: rgba(255, 255, 255, 0.05) !important;
-    border: 1px solid rgba(255, 255, 255, 0.1) !important;
-    color: #ffffff !important;
-    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.03) !important;
+    border: 1px solid var(--9y-border-subtle) !important;
+    color: var(--9y-text-primary) !important;
+    border-radius: var(--9y-radius-sm);
     padding: 0 20px;
-    height: 56px;
+    height: 52px;
     width: 100%;
     cursor: pointer;
-    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='rgba(255,255,255,0.5)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
     background-repeat: no-repeat;
     background-position: right 1rem center;
     background-size: 1rem;
+    transition: all 0.25s ease;
 }
 
 .custom-form-input select:focus {
-    border-color: #ffffff !important;
-    background-color: rgba(255, 255, 255, 0.08) !important;
+    border-color: var(--9y-border-light) !important;
+    background-color: rgba(255, 255, 255, 0.05) !important;
 }
 
 .custom-form-input select option {
-    background-color: #121212;
-    color: #ffffff;
+    background-color: var(--9y-bg-secondary);
+    color: var(--9y-text-primary);
     padding: 12px;
+}
+
+/* Contact Info Wrapper - 9Yards Gear Style */
+.contact-info-wrapper {
+    background: var(--9y-bg-card);
+    border: 1px solid var(--9y-border-subtle);
+    border-radius: var(--9y-radius-lg);
+    padding: 40px;
+}
+
+.contact-info-title {
+    color: var(--9y-text-primary);
+}
+
+.contact-detail-box {
+    margin-bottom: 28px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid var(--9y-border-subtle);
+}
+
+.contact-detail-box:last-of-type {
+    border-bottom: none;
+}
+
+.contact-detail-label {
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--9y-text-muted);
+    margin-bottom: 8px;
+    display: block;
+}
+
+.contact-detail-label i {
+    margin-right: 8px;
+}
+
+.contact-detail-value {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    color: var(--9y-text-primary);
+    line-height: 1.6;
+}
+
+.contact-detail-value a {
+    color: var(--9y-text-primary);
+    transition: color 0.25s ease;
+}
+
+.contact-detail-value a:hover {
+    color: var(--9y-accent-light);
+}
+
+/* Social Buttons - 9Yards Gear Style */
+.contact-social-links {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.contact-social-btn {
+    width: 44px;
+    height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--9y-bg-card);
+    border: 1px solid var(--9y-border-subtle);
+    border-radius: 50%;
+    color: var(--9y-text-secondary);
+    font-size: 18px;
+    transition: all 0.25s ease;
+}
+
+.contact-social-btn:hover {
+    background: var(--9y-accent-light);
+    border-color: var(--9y-accent-light);
+    color: #000000;
+    transform: translateY(-2px);
+}
+
+/* Quick Info Box - 9Yards Gear Style */
+.quick-info-box {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--9y-border-subtle);
+    border-radius: var(--9y-radius-md);
+    padding: 24px;
+    margin-top: 32px;
+}
+
+.quick-info-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.quick-info-step:last-child {
+    margin-bottom: 0;
+}
+
+.step-number {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--9y-text-muted);
+    min-width: 24px;
+}
+
+.step-content strong {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--9y-text-primary);
+    display: block;
+    margin-bottom: 4px;
+}
+
+.step-content span {
+    font-family: "Inter", sans-serif;
+    font-size: 13px;
+    color: var(--9y-text-muted);
+}
+
+/* FAQ - 9Yards Gear Style */
+.app-faq-area {
+    background: var(--9y-bg-primary);
+}
+
+.accordion-items {
+    background: var(--9y-bg-card);
+    border: 1px solid var(--9y-border-subtle);
+    border-radius: var(--9y-radius-md) !important;
+    margin-bottom: 12px;
+    overflow: hidden;
+}
+
+.accordion-buttons {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--9y-text-primary);
+    background: transparent;
+    border: none;
+    padding: 20px 24px;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.25s ease;
+}
+
+.accordion-buttons:hover {
+    background: var(--9y-bg-card-hover);
+}
+
+.accordion-body {
+    padding: 0 24px 20px;
+}
+
+.accordion-body p {
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    color: var(--9y-text-secondary);
+    line-height: 1.7;
+    margin: 0;
+}
+
+.accordion-body a {
+    color: var(--9y-accent-light);
+    text-decoration: underline;
+}
+
+/* ===== GLOBAL TYPOGRAPHY - 9YARDS GEAR STYLE ===== */
+body.black-bg-7 {
+    background: var(--9y-bg-primary) !important;
+    font-family: "Inter", sans-serif;
+}
+
+body.black-bg-7 p {
+    font-family: "Inter", sans-serif;
+    color: var(--9y-text-secondary);
+}
+
+/* Section Subtitle */
+.tp-section-subtitle {
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--9y-text-muted);
+}
+
+.tp-section-subtitle.pre-circle::before {
+    background: var(--9y-text-muted);
+}
+
+/* About Section Text */
+.creative-about-text p {
+    font-family: "Inter", sans-serif !important;
+    font-weight: 500;
+    font-size: clamp(24px, 4vw, 40px);
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+    color: var(--9y-text-primary);
+}
+
+/* Header Styling - 9Yards Gear Style */
+.tp-header-area {
+    font-family: "Inter", sans-serif;
+}
+
+.tp-header-menu nav ul li a {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    color: var(--9y-text-secondary) !important;
+    transition: color 0.25s ease;
+}
+
+.tp-header-menu nav ul li a:hover {
+    color: var(--9y-text-primary) !important;
+}
+
+.header-sticky.tp-header-blur::after {
+    background: rgba(10, 10, 11, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+/* Preloader - 9Yards Gear Style */
+#preloader {
+    background-color: var(--9y-bg-primary);
+}
+
+.preloader span {
+    background: var(--9y-accent-light);
+}
+
+/* Back to Top - 9Yards Gear Style */
+.back-to-top-btn {
+    background: var(--9y-accent-light);
+    color: #000000;
+    box-shadow: var(--9y-shadow-soft);
+}
+
+.back-to-top-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--9y-shadow-medium);
 }
